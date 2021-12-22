@@ -91,7 +91,7 @@ def main():
     if args.bare_metal:
         args.no_create_config = True
 
-    if args.arch != "x86":
+    if args.arch not in ("x86", "riscv64"):
         raise ValueError("Only x86 is supported at the moment.")
 
     try:
